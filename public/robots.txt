@@ -1,0 +1,5 @@
+# public/robots.txt — RHINO SpA
+User-agent: *
+Allow: /
+
+Sitemap: https://rhino-spa.cl/sitemap-index.xml

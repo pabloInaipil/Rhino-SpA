@@ -1,0 +1,55 @@
+---
+// src/pages/gracias/index.astro
+// ─────────────────────────────────────────────────────────────
+// RHINO® — Página de agradecimiento (conversión)
+// Google Ads conversion fires on this URL via GTM
+// ─────────────────────────────────────────────────────────────
+
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import { site } from '@/config/site';
+---
+
+<Layout title={`Gracias — ${site.shortName}`} description="Su mensaje fue enviado exitosamente.">
+  <Header />
+  <main class="min-h-[70vh] flex items-center justify-center py-32">
+    <div class="mx-auto max-w-xl px-4 text-center">
+      <!-- Success icon -->
+      <div
+        class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full"
+        style="background: var(--color-primary-50); color: var(--color-primary-600);"
+      >
+        <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <h1 class="section-title mb-4">
+        ¡Mensaje <span class="text-gold-gradient">Enviado!</span>
+      </h1>
+      <p class="text-base leading-relaxed mb-8" style="color: var(--text-muted);">
+        Gracias por contactar a RHINO. Nuestro equipo revisará su solicitud y
+        le responderá en menos de 24 horas hábiles.
+      </p>
+
+      <a href="/" class="btn-primary">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Volver al Inicio
+      </a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  // Fire conversion event
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'form_conversion',
+    event_category: 'conversion',
+    event_label: 'contact_form_success',
+  });
+</script>
