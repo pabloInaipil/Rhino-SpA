@@ -63,8 +63,11 @@ export const site = {
       'Brindamos soluciones integrales que generan valor en cada etapa de su proyecto.',
     ctaPrimary: { label: 'Conoce Más', href: '#servicios' },
     ctaSecondary: { label: 'Cotiza tu Proyecto', href: '#contacto' },
-    // Background image for the hero split layout
-    image: '/hero/hero-main.webp',
+  // Slider images — background-image (NOT <img>)
+  // Images in public/ root: /slide1.png, /slide2.png
+  slides: ['/slide1.png', '/slide2.png'],
+  // Transition interval in milliseconds
+  slideInterval: 3000,
   },
 
   // ─── Stats ────────────────────────────────────────────────

@@ -181,13 +181,7 @@ body {
   z-index: 1;
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
+/* .hero-bg removed — slider uses .hero-slide instead (see Hero.astro scoped styles) */
 
 .hero-content {
   position: relative;
